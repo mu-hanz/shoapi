@@ -10,7 +10,7 @@
         }
     ],
     "homepage": "https://github.com/mu-hanz/shoapi",
-    "keywords": ["Laravel", "Shoapi"],
+    "keywords": ["Laravel", "Shoapi", "Shopee API"],
     "require": {
         "php": "^8.0",
         "guzzlehttp/guzzle": "^7.2"
@@ -30,6 +30,9 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        },
         "laravel": {
             "providers": [
                 "Muhanz\\Shoapi\\ShoapiServiceProvider"
@@ -38,5 +41,7 @@
                 "Shoapi": "Muhanz\\Shoapi\\Facades\\Shoapi"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
