@@ -29,6 +29,9 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
         "laravel": {
             "providers": [
                 "Muhanz\\Shoapi\\ShoapiServiceProvider"
@@ -37,5 +40,7 @@
                 "Shoapi": "Muhanz\\Shoapi\\Facades\\Shoapi"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
