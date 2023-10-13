@@ -73,10 +73,10 @@ $params =  [
 ];
 
 $response = Shoapi::call('auth')
-				->access('get_access_token')
-				->shop(000000)
-				->request($params)
-				->response();
+        ->access('get_access_token')
+        ->shop(000000)
+        ->request($params)
+        ->response();
 				
 dd($response);
 ```
@@ -88,10 +88,10 @@ $params =  [
 ];
 
 $response =  Shoapi::call('auth')
-					->access('refresh_access_token')
-					->shop(000000)
-					->request($params)
-					->response();
+            ->access('refresh_access_token')
+            ->shop(000000)
+            ->request($params)
+            ->response();
 
 dd($response);
 ```
@@ -121,9 +121,9 @@ public function get_shop_info()
                        (call)	 (access)
 
   return Shoapi::call('shop')
-  				->access('get_shop_info', YOUR_ACCESS_TOKEN)
-                ->shop(YOUR_SHOP_ID)
-                ->response();
+        ->access('get_shop_info', YOUR_ACCESS_TOKEN)
+        ->shop(YOUR_SHOP_ID)
+        ->response();
 }
 ```
 
@@ -140,10 +140,10 @@ public  function  get_category()
 	];
 
 	$response = Shoapi::call('product')
-			->access('get_category',  session()->get('shoapi.access_token'))
-			->shop(session()->get('shoapi.shop_id'))
-			->request($params)
-			->response();
+    ->access('get_category',  session()->get('shoapi.access_token'))
+    ->shop(session()->get('shoapi.shop_id'))
+    ->request($params)
+    ->response();
 	dd($response);
 }
 
