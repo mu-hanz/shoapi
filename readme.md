@@ -117,8 +117,8 @@ public function get_shop_info()
 {
 	
 	// path api: /api/v2/shop/get_shop_info
-    					  |			|
-                       (call)	 (access)
+                    |			|
+                    (call)	 (access)
 
   return Shoapi::call('shop')
         ->access('get_shop_info', YOUR_ACCESS_TOKEN)
