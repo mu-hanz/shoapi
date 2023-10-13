@@ -19,7 +19,7 @@ $ composer require muhanz/shoapi
 ## Before Start
 
 Configure your variables in your `.env` (recommended) or you can publish the config file and change it there.
-```
+```bash
 SHOPEE_PRODUCTION=false // Default
 SHOPEE_HOST_URL='https://partner.shopeemobile.com'
 SHOPEE_SANDBOX_HOST_URL='https://partner.test-stable.shopeemobile.com'
@@ -51,7 +51,7 @@ public function auth_partner()
 ```
 For cancel/disconnet auth partner
 ```bash
-Shoapi::call('shop')->access('cancel_auth_partner')->redirect();
+return Shoapi::call('shop')->access('cancel_auth_partner')->redirect();
 ```
 ## Get Access Token & Refresh Access  Token
 The access_token is a dynamic token, and you need to pass access_token to call non-public APIs. Each access_token is valid for **4 hours** and can be used multiple times within **4 hours**. However, you need to refresh the access token by calling RefreshAccessToken before it expires in order to obtain a new access_token.
@@ -72,10 +72,10 @@ $params =  [
 ];
 
 $response = Shoapi::call('auth')
-        ->access('get_access_token')
-        ->shop(000000)
-        ->request($params)
-        ->response();
+		->access('get_access_token')
+		->shop(000000)
+		->request($params)
+		->response();
 				
 dd($response);
 ```
@@ -87,10 +87,10 @@ $params =  [
 ];
 
 $response =  Shoapi::call('auth')
-            ->access('refresh_access_token')
-            ->shop(000000)
-            ->request($params)
-            ->response();
+		->access('refresh_access_token')
+		->shop(000000)
+		->request($params)
+		->response();
 
 dd($response);
 ```
@@ -118,9 +118,9 @@ public function get_shop_info()
 	// path api: /api/v2/shop(use in call)/get_shop_info(use in access)
 
   return Shoapi::call('shop')
-        ->access('get_shop_info', YOUR_ACCESS_TOKEN)
-        ->shop(YOUR_SHOP_ID)
-        ->response();
+		->access('get_shop_info', YOUR_ACCESS_TOKEN)
+		->shop(YOUR_SHOP_ID)
+		->response();
 }
 ```
 
@@ -137,10 +137,10 @@ public  function  get_category()
 	];
 
 	$response = Shoapi::call('product')
-    ->access('get_category',  session()->get('shoapi.access_token'))
-    ->shop(session()->get('shoapi.shop_id'))
-    ->request($params)
-    ->response();
+			->access('get_category',  session()->get('shoapi.access_token'))
+			->shop(session()->get('shoapi.shop_id'))
+			->request($params)
+			->response();
 	dd($response);
 }
 
