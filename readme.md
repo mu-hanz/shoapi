@@ -116,9 +116,7 @@ use Muhanz\Shoapi\Facades\Shoapi;
 public function get_shop_info()
 {
 	
-	// path api: /api/v2/shop/get_shop_info
-                          |		   |
-                        (call)	 (access)
+	// path api: /api/v2/shop(use in call)/get_shop_info(use in access)
 
   return Shoapi::call('shop')
         ->access('get_shop_info', YOUR_ACCESS_TOKEN)
