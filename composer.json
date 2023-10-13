@@ -11,8 +11,8 @@
     ],
     "homepage": "https://github.com/mu-hanz/shoapi",
     "keywords": ["Laravel", "Shoapi"],
-    "minimum-stability": "dev",
     "require": {
+        "php": "^8.0",
         "guzzlehttp/guzzle": "^7.2"
     },
     "require-dev": {
