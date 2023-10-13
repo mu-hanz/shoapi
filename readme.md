@@ -28,7 +28,7 @@ SHOPEE_PARTNER_KEY=<YOUR_PARTNER_KEY>
 ```
 (Optional) You can publish the config file via this command:
 ```bash
-php artisan vendor:publish --provider="Muhanz\Shoapi\ShoapiServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Muhanz\Shoapi\ShoapiServiceProvider" --tag="shoapi.config"
 ```
 
 ## Authorization and Authentication
