@@ -1,15 +1,15 @@
 {
     "name": "muhanz/shoapi",
-    "description": "",
+    "description": "Laravel Shopee Open API SDK",
     "license": "MIT",
     "authors": [
         {
             "name": "Mu Hanz",
             "email": "muhanz21@gmail.com",
-            "homepage": "http://muhanz.id"
+            "homepage": "https://github.com/mu-hanz"
         }
     ],
-    "homepage": "https://github.com/muhanz/shoapi",
+    "homepage": "https://github.com/mu-hanz/shoapi",
     "keywords": ["Laravel", "Shoapi"],
     "require": {
         "guzzlehttp/guzzle": "^7.2"
