@@ -1,4 +1,4 @@
-# Shoapi - Laravel Shopee API SDK (V2)
+# ShoAPI - Laravel Shopee API SDK (V2)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
