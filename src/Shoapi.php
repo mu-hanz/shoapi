@@ -59,63 +59,67 @@ class Shoapi extends Client
     protected $request = [];
 
     /**
-     * Get and Set Called Request
-     *
+     * Get and Set Called Request.
      */
     public function call(string $value)
     {
         $this->called = $value;
+
         return $this;
     }
 
     /**
-     * Get and Set Access or Token Request
+     * Get and Set Access or Token Request.
      *
      * @param string $value
      * @param string $access_token
      */
     public function access(string $value, string $access_token = '')
     {
-        $this->accessToken =  $access_token;
+        $this->accessToken = $access_token;
         $this->access = $value;
+
         return $this;
     }
 
     /**
-     * Get and Set Shop ID
+     * Get and Set Shop ID.
      *
      * @param int $value
      */
     public function shop($value)
     {
         $this->shopId = (int) $value;
+
         return $this;
     }
 
     /**
-     * Get and Set Shop ID
+     * Get and Set Shop ID.
      *
      * @param int $value
      */
     public function merchant($value)
     {
         $this->merchantId = (int) $value;
+
         return $this;
     }
 
     /**
-     * Get and Set Parameters Request
+     * Get and Set Parameters Request.
      *
      * @param array $request
      */
     public function request(array $request = [])
     {
         $this->request = $request;
+
         return $this;
     }
 
     /**
-     * Get response
+     * Get response.
      *
      * @return array
      */
@@ -125,7 +129,7 @@ class Shoapi extends Client
     }
 
     /**
-     * Redirect Auth Parter
+     * Redirect Auth Parter.
      *
      * @return array
      */
@@ -135,7 +139,7 @@ class Shoapi extends Client
     }
 
     /**
-     * Get Auth Parter
+     * Get Auth Parter.
      *
      * @return string url
      */
@@ -145,21 +149,20 @@ class Shoapi extends Client
     }
 
     /**
-     * Get response
+     * Get response.
      *
      * @return Muhanz\Shoapi\Client;
      */
     protected function getResponse()
     {
-
         $credential = [
-            'path' => $this->getSpecificPath(),
+            'path'            => $this->getSpecificPath(),
             'access_token'    => $this->accessToken,
-            'shop_id'    => (int) $this->shopId,
-            'merchant_id'    => (int) $this->merchantId
+            'shop_id'         => (int) $this->shopId,
+            'merchant_id'     => (int) $this->merchantId,
         ];
 
-        $credential =  collect($credential)->reject(function ($value) {
+        $credential = collect($credential)->reject(function ($value) {
             return empty($value);
         });
 
@@ -170,7 +173,7 @@ class Shoapi extends Client
     }
 
     /**
-     * Get Specific Path of API
+     * Get Specific Path of API.
      *
      * @return string;
      */
@@ -178,23 +181,24 @@ class Shoapi extends Client
     {
         if ($this->called === 'auth') {
             if ($this->access === 'get_access_token') {
-                return $this->called . '/token/get';
+                return $this->called.'/token/get';
             } else {
-                return $this->called . '/access_token/get';
+                return $this->called.'/access_token/get';
             }
         }
-        return $this->called . '/' . $this->access;
+
+        return $this->called.'/'.$this->access;
     }
 
     /**
-     * Get Method of API
+     * Get Method of API.
      *
      * @return string;
      * Muhanz\shoapi\config\shoapi_path;
      */
     protected function getHttpMethod()
     {
-        $getMethod = Arr::get(config('shoapi_path'), $this->called . '.' . $this->access);
+        $getMethod = Arr::get(config('shoapi_path'), $this->called.'.'.$this->access);
 
         if ($getMethod) {
             return $getMethod;
@@ -204,29 +208,29 @@ class Shoapi extends Client
     }
 
     /**
-     * Create auth URL
+     * Create auth URL.
      */
     protected function createAuthUrl()
     {
-        if(!config('shoapi.callback_url')){
+        if (!config('shoapi.callback_url')) {
             throw new InvalidArgumentException('No callback URL in shoapi config file.');
         }
 
         return  $this->credential([
-            'path' => $this->getSpecificPath()
+            'path' => $this->getSpecificPath(),
         ])->signature([
-            'redirect'  => config('shoapi.callback_url')
+            'redirect'  => config('shoapi.callback_url'),
         ]);
     }
 
     /**
-     * Create data response
+     * Create data response.
      *
      * @return array;
      */
     protected function dataCollect($response)
     {
-        $data =  collect($response)->reject(function ($value) {
+        $data = collect($response)->reject(function ($value) {
             return empty($value);
         });
 

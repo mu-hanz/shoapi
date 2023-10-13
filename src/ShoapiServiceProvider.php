@@ -36,7 +36,7 @@ class ShoapiServiceProvider extends ServiceProvider
 
         // Register the service the package provides.
         $this->app->singleton('shoapi', function ($app) {
-            return new Shoapi;
+            return new Shoapi();
         });
     }
 
