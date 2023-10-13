@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![StyleCI](https://github.styleci.io/repos/704592871/shield?branch=analysis-6Vv3rW)](https://github.styleci.io/repos/704592871?branch=analysis-6Vv3rW)
 
 ![Laravel Shopee API SDK (V2)](https://muhanz.my.id/ShoAPI.svg)
 
