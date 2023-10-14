@@ -1,7 +1,10 @@
 # ShoAPI - Laravel Shopee API SDK (V2)
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Latest Stable Version](http://poser.pugx.org/muhanz/shoapi/v?style=flat-square)](https://packagist.org/packages/muhanz/shoapi)
+[![Total Downloads](http://poser.pugx.org/muhanz/shoapi/downloads?style=flat-square)](https://packagist.org/packages/muhanz/shoapi)
+[![Latest Unstable Version](http://poser.pugx.org/muhanz/shoapi/v/unstable?style=flat-square)](https://packagist.org/packages/muhanz/shoapi)
+[![License](http://poser.pugx.org/muhanz/shoapi/license?style=flat-square)](https://packagist.org/packages/muhanz/shoapi)
+[![PHP Version Require](http://poser.pugx.org/muhanz/shoapi/require/php?style=flat-square)](https://packagist.org/packages/muhanz/shoapi)
 [![StyleCI](https://github.styleci.io/repos/704592871/shield?branch=analysis-6Vv3rW)](https://github.styleci.io/repos/704592871?branch=analysis-6Vv3rW)
 
 ![Laravel Shopee API SDK (V2)](https://muhanz.my.id/ShoAPI.svg)
