@@ -9,7 +9,7 @@
 
 ![Laravel Shopee API SDK (V2)](https://muhanz.my.id/ShoAPI.svg)
 
-This is a Shopee PHP Client for Laravel 9|10 and currently supported **API V2**
+This is a Unofficial Shopee PHP Client for Laravel 9|10 and currently supported **API V2**
 > ShoAPi lets you develop **Shopee Open API** in Laravel.
 ShoAPi  is an HTTP-based interface created for developers interested **Shopee Open API**.
 To learn more about the **Shopee Open API**, please consult the Introduction on the official [Shopee Open Platform](https://open.shopee.com/documents?module=87&type=2&id=64&version=2) site.
