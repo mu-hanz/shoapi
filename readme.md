@@ -121,8 +121,8 @@ public function get_shop_info()
 	// path api: /api/v2/shop(use in call)/get_shop_info(use in access)
 
   return Shoapi::call('shop')
-		->access('get_shop_info', YOUR_ACCESS_TOKEN)
-		->shop(YOUR_SHOP_ID)
+		->access('get_shop_info', <YOUR_ACCESS_TOKEN>)
+		->shop(<YOUR_SHOP_ID>)
 		->response();
 }
 ```
@@ -140,8 +140,8 @@ public  function  get_category()
 	];
 
 	$response = Shoapi::call('product')
-			->access('get_category',  session()->get('shoapi.access_token'))
-			->shop(session()->get('shoapi.shop_id'))
+			->access('get_category',  <YOUR_ACCESS_TOKEN>)
+			->shop(<YOUR_SHOP_ID>)
 			->request($params)
 			->response();
 	dd($response);
