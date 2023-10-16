@@ -195,9 +195,9 @@ Currently supported all methods exclude **GlobalProduct(CB seller only)** please
 
 
 
-## Full Documentation *(soon)*
+## Documentation
 
-Documentation for the SDK can be found on the `[soon]`
+Please refer to the official documentation [Shopee Open Platform](https://open.shopee.com/developer-guide/4)
 
 
 ## Change log
